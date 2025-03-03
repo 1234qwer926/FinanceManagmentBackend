@@ -32,5 +32,6 @@ router.delete("/:id", authMiddleware, (req, res, next) => {
     console.log("Transaction ID:", req.params.id);
     next();
 }, deleteTransaction);
+router.get("/:id", authMiddleware, getTransactionById);
 
 module.exports = router;
